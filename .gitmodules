@@ -4,3 +4,6 @@
 [submodule "tomcat8"]
 	path = tomcat8
 	url = https://github.com/grossws/docker-comp-tomcat8.git
+[submodule "solr4"]
+	path = solr4
+	url = https://github.com/grossws/docker-comp-solr4.git
