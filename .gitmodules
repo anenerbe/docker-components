@@ -1,3 +1,6 @@
 [submodule "java7"]
 	path = java7
 	url = https://github.com/grossws/docker-comp-java7.git
+[submodule "tomcat8"]
+	path = tomcat8
+	url = https://github.com/grossws/docker-comp-tomcat8.git

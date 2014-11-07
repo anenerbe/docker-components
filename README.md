@@ -11,7 +11,7 @@ Images are based on official `centos` image and images from this repo.
 # Contents:
 
 - [x] [java7][im-java7] (7u71)
-- [ ] [tomcat8][im-tomcat8] (8.0.14)
+- [x] [tomcat8][im-tomcat8] (8.0.14)
 
 [im-java7]: https://github.com/grossws/docker-comp-java7
 [im-tomcat8]: https://github.com/grossws/docker-comp-tomcat8
