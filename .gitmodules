@@ -7,3 +7,9 @@
 [submodule "solr4"]
 	path = solr4
 	url = https://github.com/grossws/docker-comp-solr4.git
+[submodule "solr4-base"]
+	path = solr4-base
+	url = gl:docker/solr4-base.git
+[submodule "solr4-public"]
+	path = solr4-public
+	url = gl:docker/solr4-public
