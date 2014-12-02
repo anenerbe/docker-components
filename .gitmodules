@@ -13,3 +13,6 @@
 [submodule "solr4-public"]
 	path = solr4-public
 	url = gl:docker/solr4-public
+[submodule "centos6"]
+	path = centos6
+	url = https://github.com/grossws/docker-comp-centos6.git
