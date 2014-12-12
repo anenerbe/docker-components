@@ -12,7 +12,13 @@
 	url = gl:docker/solr4-base.git
 [submodule "solr4-public"]
 	path = solr4-public
-	url = gl:docker/solr4-public
+	url = gl:docker/solr4-public.git
 [submodule "centos6"]
 	path = centos6
 	url = https://github.com/grossws/docker-comp-centos6.git
+[submodule "public-loader"]
+	path = public-loader
+	url = gl:docker/public-loader.git
+[submodule "apokrif-ui"]
+	path = apokrif-ui
+	url = gl:docker/apokrif-ui.git
