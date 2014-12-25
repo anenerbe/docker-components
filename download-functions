@@ -1,0 +1,54 @@
+#!/bin/bash
+
+mvn_download() {
+  group=org.anenerbe
+  artifact=
+  packaging=tar.gz
+  classifier=
+  version=RELEASE
+
+  OPTIND=1
+  while getopts "hg:a:v:c:p:" opt ; do
+    case "$opt" in
+      h)
+        echo -ne "usage:\tmvn_download [-g <groupId=org.anenerbe>] [-a <artifactId>] [-p <packaging=tar.gz>] [-v <version=RELEASE>] [-c <classifier=>]\n\tmvn_download -h\n\nreturns 0 in case of success and not 0 otherwise\n\n"
+        return 1
+        ;;
+      g)
+        group=$OPTARG
+        ;;
+      a)
+        artifact=$OPTARG
+        ;;
+      v)
+        version=$OPTARG
+        ;;
+      c)
+        classifier=$OPTARG
+        ;;
+      p)
+        packaging=$OPTARG
+        ;;
+    esac
+  done
+
+  shift $((OPTIND-1))
+
+  [ "$1" = "--" ] && shift
+
+  if [ $# -gt 0 ] ; then
+    echo "Unrecognized extra args: $@"
+    return 1
+  fi
+
+  if [ -z "$artifact" ] ; then
+    echo "error: artifactId should be set"
+    return 1
+  fi
+
+  mvn dependency:copy -Dartifact=${group}:${artifact}:${version}:${packaging}:${classifier} -Dmdep.stripVersion=true -Dmdep.overWriteReleases=true -Dmdep.overWriteSnapshots=true -DoutputDirectory=./
+  return $?
+}
+
+# vim:sw=2:et:ai:sts=2:
+
