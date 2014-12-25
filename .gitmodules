@@ -22,3 +22,9 @@
 [submodule "apokrif-ui"]
 	path = apokrif-ui
 	url = gl:docker/apokrif-ui.git
+[submodule "batch"]
+	path = batch
+	url = gl:docker/batch.git
+[submodule "indexer"]
+	path = indexer
+	url = gl:docker/indexer.git
