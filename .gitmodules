@@ -28,3 +28,6 @@
 [submodule "indexer"]
 	path = indexer
 	url = gl:docker/indexer.git
+[submodule "mystem"]
+	path = mystem
+	url = gl:docker/mystem.git
